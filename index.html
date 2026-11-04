@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FBF7EF">
+<title>Para ti, mi amor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #FBF7EF;
+  --pink: #E8EEE3;
+  --rose: #68785B;
+  --ink: #41483D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100svh;
+  padding: 55px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.cover {
+  background:
+    radial-gradient(circle at 15% 20%, #DCE5D5 0, transparent 25%),
+    radial-gradient(circle at 85% 80%, #E8EEE3 0, transparent 30%),
+    var(--cream);
+}
+
+.small {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: var(--rose);
+}
+
+h1 {
+  font-size: clamp(65px, 15vw, 105px);
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(48px, 11vw, 70px);
+  margin: 10px 0 22px;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.9;
+  font-size: 17px;
+  max-width: 520px;
+}
+
+.ornament {
+  color: var(--rose);
+  font-size: 30px;
+  margin: 15px;
+}
+
+button {
+  border: 1px solid var(--rose);
+  color: white;
+  background: var(--rose);
+  padding: 15px 27px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 12px;
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: #526347;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--rose);
+}
+
+.photo {
+  width: min(85%, 330px);
+  padding: 12px 12px 35px;
+  background: white;
+  box-shadow: 0 12px 30px #52634724;
+  transform: rotate(-2deg);
+  margin: 25px auto;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.photo-caption {
+  font-family: 'Great Vibes', cursive;
+  font-size: 27px;
+  margin-top: 12px;
+  color: var(--rose);
+}
+
+.card {
+  max-width: 550px;
+  padding: 30px 24px;
+  border: 1px solid #C8D3BF;
+  background: #FFFCF6;
+  box-shadow: 0 12px 35px #52634712;
+  margin: 20px auto;
+}
+
+.video {
+  width: min(100%, 430px);
+  border: 9px solid white;
+  box-shadow: 0 10px 30px #52634725;
+  margin: 20px auto;
+  background: #fff;
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 1s, transform 1s;
+}
+
+.hidden.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  color: #A3B18A;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  padding: 40px 15px;
+  color: var(--rose);
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<section class="cover">
+  <div class="small">Una pequeña sorpresa para alguien especial</div>
+  <div class="ornament">♡</div>
+  <h1>Para ti...</h1>
+  <p>He preparado algo que quiero que descubras con calma.</p>
+  <div class="ornament">✿</div>
+  <button onclick="startExperience()">Abrir mi sorpresa ❤️</button>
+  <button class="secondary" onclick="toggleMusic()">♫ Activar música</button>
+  <div class="small">Hecho con mucho amor</div>
+</section>
+
+<section>
+  <div class="hidden">
+    <div class="small">Capítulo uno</div>
+    <h2>Todo comenzó...</h2>
+    <div class="card">
+      <p>
+        A veces las cosas más bonitas de la vida llegan sin avisar.
+        Y entre tantas casualidades, tuve la suerte de encontrarte.
+      </p>
+      <div class="ornament">♡</div>
+      <p>Desde entonces, hay recuerdos que guardo como mis pequeños tesoros.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="hidden">
+    <div class="small">Nuestros recuerdos</div>
+    <h2>Momentos contigo</h2>
+
+    <div class="photo">
+      <img src="fotos/foto1.jpg" alt="Nuestro primer recuerdo"
+      onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p>📷 Aquí irá nuestra primera foto</p>')">
+      <div class="photo-caption">Un recuerdo especial</div>
+    </div>
+
+    <div class="photo" style="transform:rotate(2deg)">
+      <img src="fotos/foto2.jpg" alt="Otro recuerdo"
+      onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p>📷 Aquí irá nuestra segunda foto</p>')">
+      <div class="photo-caption">Y muchos más por vivir...</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="hidden">
+    <div class="small">Un recuerdo para volver a vivir</div>
+    <h2>Nuestro video</h2>
+    <p>Porque hay momentos que merecen quedarse para siempre.</p>
+
+    <div class="video">
+      <video controls playsinline preload="metadata">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="hidden">
+    <div class="small">Unas palabras para ti</div>
+    <h2>Mi carta</h2>
+
+    <div class="card">
+      <p>
+        Mi amor:
+        <br><br>
+        Quiero que sepas lo importante que eres para mí.
+        No importa cuántos días pasen, cuántas cosas sucedan
+        o qué tan lejos estemos: siempre voy a encontrar
+        razones para elegirte.
+        <br><br>
+        Gracias por cada sonrisa, cada abrazo, cada aventura
+        y cada instante que hemos compartido.
+        <br><br>
+        No quiero solamente recordar lo que hemos vivido.
+        Quiero seguir construyendo miles de recuerdos contigo.
+        <br><br>
+        Te elijo hoy, mañana y todos los días.
+      </p>
+
+      <div class="ornament">♡</div>
+      <h2 style="font-size:55px">Te amo</h2>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Nuestra historia apenas comienza... ♡
+</footer>
+
+<script>
+let musicPlaying = false;
+
+function startExperience() {
+  document.querySelectorAll('.hidden').forEach(el => {
+    el.classList.add('visible');
+  });
+
+  toggleMusic();
+
+  document.querySelectorAll('section')[1].scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+function toggleMusic() {
+  const music = document.getElementById('music');
+
+  if (!musicPlaying) {
+    music.play().then(() => {
+      musicPlaying = true;
+
+      document.querySelectorAll('button.secondary').forEach(b => {
+        b.textContent = '♫ Pausar música';
+      });
+
+    }).catch(() => {
+      alert('Primero agrega el archivo musica.mp3 a la página.');
+    });
+
+  } else {
+    music.pause();
+    musicPlaying = false;
+
+    document.querySelectorAll('button.secondary').forEach(b => {
+      b.textContent = '♫ Activar música';
+    });
+  }
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.hidden').forEach(el => {
+  observer.observe(el);
+});
+
+function createHeart() {
+  const heart = document.createElement('div');
+
+  heart.className = 'heart';
+  heart.textContent = '♥';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (12 + Math.random() * 18) + 'px';
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 1800);
+</script>
+
+</body>
+</html>
